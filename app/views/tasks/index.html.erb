@@ -1,0 +1,8 @@
+<h1> Tasks Index </h1>
+<%= link_to "Add New Task", tasks_new_path %>
+
+<% @tasks.each do |task|%>
+<p><%= task[:completed] ? "Done": "Pending" %> - <%= link_to task[:title], task_path(task) %> - <%= task[:details]%></p>
+<br>
+
+<% end %>
